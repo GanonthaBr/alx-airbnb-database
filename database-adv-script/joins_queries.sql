@@ -24,7 +24,9 @@ SELECT
     r.comment,
     r.created_at
 FROM properties p
-LEFT JOIN reviews r ON p.property_id = r.property_id;
+LEFT JOIN reviews r ON p.property_id = r.property_id
+ORDER BY p.name ASC, r.created_at DESC;
+
 
 
 -- Full Outer join
